@@ -12,8 +12,8 @@ Work through the numbered sections in order. Each one tells you what it must do.
 Delete these instructions as you replace them with your code.
 """
 
-label = input("Label: ")
-used = float(input("Used: "))
+label = input("Dataset Label: ")
+used = float(input("Total Used: "))
 total = float(input("Total: "))
 
 
