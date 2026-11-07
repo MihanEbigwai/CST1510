@@ -1,5 +1,4 @@
-# BROKEN ON PURPOSE.
-# Run it, read the last line, then fix it.
+# completed warm-up
 
 class Record:
     def __init__(self, label, amount, limit):
@@ -8,4 +7,4 @@ class Record:
         self.limit = limit
 
 r = Record("R-001", 87.0, 100.0)
-print(r.value)
+print(r.amount)

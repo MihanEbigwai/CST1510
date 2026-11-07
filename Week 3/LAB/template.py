@@ -1,5 +1,5 @@
 """
-RECORD CHECK  -  my version
+record check  -  my version
 ===========================
 
 Name  : Joe-Ebigwai Oronmihan David
@@ -9,11 +9,11 @@ Date  : 11th October 2026
 Run it:   python template.py
 """
 
-# =================================================================== FUNCTIONS
-# 1. Define the functions. Each function does one job.
+# =================================================================== functions
+# 1. define the functions. Each function does one job
 
 def status_of(percent):
-    """Return the status for the percentage used."""
+    """use the percentage to pick a status"""
     if percent >= 100:
         return "OVER LIMIT"
     elif percent >= 90:
@@ -23,14 +23,14 @@ def status_of(percent):
 
 
 def check(value, limit):
-    """Return the difference and percentage used."""
+    """return the difference and percentage used"""
     difference = value - limit
     percent = (value / limit) * 100
     return difference, percent
 
 
 def print_report(label, value, limit, difference, percent, status):
-    """Print the formatted report for one record."""
+    """show the numbers and status for one record"""
     print()
     print("=" * 34)
     print(f"  RECORD CHECK  -  {label}")
@@ -44,17 +44,17 @@ def print_report(label, value, limit, difference, percent, status):
 
 
 def print_summary(count):
-    """Print the final number of over-limit records."""
+    """print the final number of over-limit records"""
     print(f"\nRecords OVER LIMIT: {count}")
 
 
-# ==================================================================== INPUT
-# 2. Ask for the three values. Repeat until the label is "quit".
+# ==================================================================== input
+# 2. ask for the three values. Repeat until the label is "quit"
 
 over_limit_count = 0
 
 while True:
-    label = input("Hostname (or quit to stop): ")
+    label = input("Hostname (or quit to stop): ").strip()
 
     if label.lower() == "quit":
         break
@@ -62,8 +62,8 @@ while True:
     value = float(input("GB used: "))
     limit = float(input("GB total: "))
 
-    # ================================================================== PROCESS
-    # 3. Calculate the difference, percentage, and status.
+    # ================================================================== process
+    # 3. calculate the difference, percentage, and status
 
     difference, percent = check(value, limit)
     status = status_of(percent)
@@ -71,19 +71,19 @@ while True:
     if status == "OVER LIMIT":
         over_limit_count += 1
 
-    # =================================================================== OUTPUT
-    # 4. Print the report using print_report().
+    # =================================================================== output
+    # 4. print the report using print_report()
 
     print_report(label, value, limit, difference, percent, status)
 
-# Print the count once, after the loop ends.
+# print the count once, after the loop ends
 print_summary(over_limit_count)
 
 
 # ==========================================================================
-# 5. Before you finish:
+# 5. before you finish:
 #
-#    [Checked] Run it three times with different numbers
-#    [Checked] Run it with a total of 0 and note the error (do not fix it yet)
-#        Error: ZeroDivisionError: division by zero, in check().
-#    [Checked] Check every function does one job
+# [checked] Run it three times with different numbers
+# [checked] Run it with a total of 0 and note the error (do not fix it yet)
+# error: ZeroDivisionError: division by zero, in check()
+# [checked] Check every function does one job

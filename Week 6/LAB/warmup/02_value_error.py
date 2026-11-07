@@ -1,0 +1,8 @@
+# completed warm-up
+
+import pandas as pd
+
+df = pd.DataFrame({
+    "label": ["R-001", "R-002"],
+    "value": [87, 120],
+})

@@ -1,5 +1,4 @@
-# BROKEN ON PURPOSE.
-# Run it, read the last line, then fix it.
+# completed warm-up
 
 def status_of(percent, warning_at):
     if percent >= 100:

@@ -1,8 +1,7 @@
-# BROKEN ON PURPOSE.
-# Run it, read the last line, then fix it.
+# completed warm-up
 
 class Record:
-    def status(self, percent):    # this parameter should be self
+    def status(self, percent):
         return percent
 
 r = Record()

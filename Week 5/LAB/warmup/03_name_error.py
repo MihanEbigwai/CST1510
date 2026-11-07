@@ -1,5 +1,4 @@
-# BROKEN ON PURPOSE.
-# Run it, read the last line, then fix it.
+# completed warm-up
 
 class Record:
     def __init__(self, label, value, limit):

@@ -1,5 +1,7 @@
-# BROKEN ON PURPOSE.
-# Run it, read the last line, then fix it.
+# completed warm-up
 
-with open("records.txt") as f:
+from pathlib import Path
+
+records_path = Path(__file__).resolve().parents[1] / "records.txt"
+with records_path.open(encoding="utf-8") as f:
     print(f.read())

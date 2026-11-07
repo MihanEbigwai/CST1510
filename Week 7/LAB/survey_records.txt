@@ -1,0 +1,7 @@
+Survey_2026 , rating=4 , age=23
+survey_2026,RATING=2,AGE=19
+SURVEY_2025 , Rating=5 , Age=21
+survey_2024 ,rating=1, age=18
+SURVEY_2023, RATING=3, AGE=22
+Survey_2022 , rating=2 , AGE=20
+survey_2021, rating=unknown, age=19

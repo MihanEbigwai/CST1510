@@ -1,5 +1,4 @@
-# BROKEN ON PURPOSE.
-# Run it, read the last line, then fix it.
+# completed warm-up
 
 def check(value, limit):
     status = "OVER LIMIT" if value > limit else "OK"

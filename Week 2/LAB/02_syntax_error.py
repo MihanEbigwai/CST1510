@@ -1,5 +1,4 @@
-# BROKEN ON PURPOSE.
-# Run it, read the last line, then fix it.
+# completed warm-up
 
 attempts = 3
 max_attempts = 3

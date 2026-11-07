@@ -1,13 +1,15 @@
-
 """
-RECORD CHECK - my version
+record check - my version
 Name: Joe-Ebigwai Oronmihan David
 Lane: AI
 Date: 18th October 2026
 """
 
+from pathlib import Path
+
+
 def check_record(value, limit):
-    """Calculate difference, percentage and status."""
+    """calculate difference, percentage and status"""
     difference = value - limit
     percent = (value / limit) * 100
 
@@ -20,15 +22,15 @@ def check_record(value, limit):
 
 
 def print_report(message):
-    """Print a report or message."""
+    """print a report or message"""
     print(message)
 
 
 def load_records(path):
-    """Read records from a text file."""
+    """read records from a text file"""
     records = []
 
-    with open(path, "r") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             label, value, limit = line.strip().split(",")
 
@@ -42,14 +44,18 @@ def load_records(path):
 
 
 def save_results(path, results):
-    """Write record statuses to a file."""
-    with open(path, "w") as file:
+    """write record statuses to a file"""
+    with open(path, "w", encoding="utf-8") as file:
         for label, status in results:
             file.write(f"{label},{status}\n")
 
 
+# use the lab folder even if the script is run from somewhere else
+lab_dir = Path(__file__).resolve().parent
+
+records_path = lab_dir / "records.txt"
 try:
-    records = load_records("records.txt")
+    records = load_records(records_path)
 except FileNotFoundError:
     print_report("Error: records.txt not found.")
     records = []
@@ -78,4 +84,6 @@ for record in records:
 
 print_report(f"\nTotal OVER LIMIT: {over_count}")
 
-save_results("results.txt", results)
+# keep the old report if the input file is missing
+if records_path.is_file():
+    save_results(lab_dir / "project_results.txt", results)
